@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js",type="text/javascript")
+  script(src="/javascripts/formdata.js",type="text/javascript")
+  form(id="uploadForm" , method="post", enctype="multipart/form-data" )
+    input(type="file", id="file", name="file")
+    br
+    button(type="button", id="bt1", name="bt1" onclick="doUpload()") upload
